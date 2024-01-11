@@ -20,23 +20,12 @@ public class ItemEntry : MonoBehaviour
     void SetVisual()
     {
         if (myItem)
-            myImage.sprite = SizeSprite(myItem.MyIcon);
-    }
-
-    Sprite SizeSprite(Sprite target)
-    {
-        Sprite currentSprite = target;
-        float newPixelsPerUnit = currentSprite.pixelsPerUnit * 4f;
-
-        Sprite newSprite = Sprite.Create(currentSprite.texture, currentSprite.rect, new Vector2(0.5f, 0.5f), newPixelsPerUnit);
-
-        return newSprite;
+            myImage.sprite = myItem.MyIcon;
     }
     public void MousePress()
     {
         if (myItem)
         {
-            Debug.Log("PRESSED");
             List<ChoicesPanel.ButtonFunction> functions = new();
 
             switch (myInv.CurrentState)
