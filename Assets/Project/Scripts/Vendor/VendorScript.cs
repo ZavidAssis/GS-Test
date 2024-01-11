@@ -1,10 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class VendorScript : MonoBehaviour
 {
+    [SerializeField]
+    private string WhatISell;
+    [SerializeField]
+    TMP_Text vendorText;
+
     public List<ItemSO> itensSelling=new();
+
+    private void Start()
+    {
+        vendorText.SetText(WhatISell);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerComponents>())

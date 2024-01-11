@@ -47,3 +47,6 @@ TagManager:
   - name: Wall
     uniqueID: 3436296563
     locked: 0
+  - name: InGameHud
+    uniqueID: 1848715667
+    locked: 0
