@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Leg
   Value: 15
-  MyIcon: {fileID: 21300000, guid: 40e550cd3b539f14eb98d42b6769b592, type: 3}
+  MyIcon: {fileID: 21300000, guid: 925993f8892fa474c904d0e9a8f67cee, type: 3}
   MyType: 7
   MyVisual:
-  - {fileID: 21300000, guid: 40e550cd3b539f14eb98d42b6769b592, type: 3}
-  - {fileID: 21300000, guid: 7b78357522a34d64bb8775b962b0deb0, type: 3}
+  - {fileID: 21300000, guid: 925993f8892fa474c904d0e9a8f67cee, type: 3}
+  - {fileID: 21300000, guid: 321cb2880c53eb743987a6a94741e4f0, type: 3}

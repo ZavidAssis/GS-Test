@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class MissionCape : MonoBehaviour
 {
     [SerializeField]
@@ -69,6 +69,6 @@ public class MissionCape : MonoBehaviour
 
 
         yield return new WaitForSeconds(5);
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }
