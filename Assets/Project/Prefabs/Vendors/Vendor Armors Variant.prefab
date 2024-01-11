@@ -22,35 +22,35 @@ PrefabInstance:
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 0905716f0c3f98245bb88097ff844dfc, type: 2}
+      objectReference: {fileID: 11400000, guid: 998b2e83855a1774ab600c579a8b4f0c, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: b41b623e58ffcbf469895b33d203068f, type: 2}
+      objectReference: {fileID: 11400000, guid: 0905716f0c3f98245bb88097ff844dfc, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: b2c9119f280165144acf77505caa3b2e, type: 2}
+      objectReference: {fileID: 11400000, guid: 98bea3daccfb6b24e82a94312cb2af59, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: b7f7575fa7b85844990117f70dbf2ad4, type: 2}
+      objectReference: {fileID: 11400000, guid: b41b623e58ffcbf469895b33d203068f, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 998b2e83855a1774ab600c579a8b4f0c, type: 2}
+      objectReference: {fileID: 11400000, guid: b0e8b5e9d8351384a9dbbd7d93f2fbcd, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 98bea3daccfb6b24e82a94312cb2af59, type: 2}
+      objectReference: {fileID: 11400000, guid: b2c9119f280165144acf77505caa3b2e, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: b0e8b5e9d8351384a9dbbd7d93f2fbcd, type: 2}
+      objectReference: {fileID: 11400000, guid: 83ea7b6007ddbed4698b6f58c5a14d1f, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 83ea7b6007ddbed4698b6f58c5a14d1f, type: 2}
+      objectReference: {fileID: 11400000, guid: b7f7575fa7b85844990117f70dbf2ad4, type: 2}
     - target: {fileID: 1994449161070463462, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: itensSelling.Array.data[9]
       value: 
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994449161070463465, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}
       propertyPath: m_Name
-      value: Vendor Armors
+      value: Vendor Armors Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802acfffbbc6c6b4092e65b65cbaf185, type: 3}

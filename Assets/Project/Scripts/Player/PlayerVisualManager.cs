@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System;
-using static UnityEditor.Progress;
 public class PlayerVisualManager : MonoBehaviour
 {
     [EnumNamedArray(typeof(ArmorTypes))]
