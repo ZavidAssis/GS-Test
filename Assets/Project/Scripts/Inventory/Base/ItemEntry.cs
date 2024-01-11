@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ public class ItemEntry : MonoBehaviour
 {
     [SerializeField]
     private Image myImage;
+    [SerializeField]
+    private TMP_Text PriceText;
 
     InventoryBase myInv;
     ItemSO myItem;
@@ -20,7 +23,12 @@ public class ItemEntry : MonoBehaviour
     void SetVisual()
     {
         if (myItem)
+        {
             myImage.sprite = myItem.MyIcon;
+
+            if (myInv.CurrentState == InventoryState.Buying)
+                PriceText.SetText($"{myItem.Value}$");
+        }
     }
     public void MousePress()
     {

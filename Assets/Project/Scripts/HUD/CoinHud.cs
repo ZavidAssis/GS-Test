@@ -7,7 +7,7 @@ public class CoinHud : MonoBehaviour
 {
     [SerializeField]
     TMP_Text myText;
-    void Start()
+    void Awake()
     {
         AttributesManager.Instance.OnMoneyChange += AttText;
     }
