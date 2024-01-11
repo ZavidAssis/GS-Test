@@ -5,59 +5,70 @@ public enum InventoryState
 {
     Buying,
     Selling,
-    Managing
+    Managing,
+    Equipment
 }
 public class InventoryBase : MonoBehaviour
 {
-
     [SerializeField]
-    private ItemEntry itemEntry;
-    [SerializeField]
-    private Transform choicesPanel;
+    protected ItemEntry itemEntry;
 
 
     [SerializeField]
     private GameObject myTab;
     [SerializeField]
-    private Transform contentTransform;
+    protected Transform contentTransform;
 
 
     //aux vars
     protected List<ItemSO> myItens = new();
     private InventoryState currentState;
+    public InventoryState CurrentState { get => currentState; }
 
-    public InventoryState CurrentState { get => currentState;}
-
-    public void ShowHide(InventoryState state)
+    public void ShowHide(InventoryState state, bool ForceOn = false)
     {
-        bool turn = !myTab.activeInHierarchy;
+        bool turn = ForceOn ? true : !myTab.activeInHierarchy;
         myTab.SetActive(turn);
+
 
 
         if (turn)
             TurnOn(state);
-        
-    }
 
+    }
+    public void Hide()
+    {
+        myTab.SetActive(false);
+        ChoicesPanel.Instance.Hide();
+    }
     private void TurnOn(InventoryState state)
     {
         CountItens();
         currentState = state;
     }
-    void CountItens()
+    protected virtual void CountItens()
     {
+        ResetItens();
         for (int i = 0; i < myItens.Count; i++)
         {
             Instantiate(itemEntry, contentTransform).Init(this, myItens[i]);
         }
     }
-
-    public void RemoveItem(ItemSO target)
+   protected virtual void ResetItens()
+    {
+        foreach (ItemEntry Item in transform.GetComponentsInChildren<ItemEntry>())
+        {
+            Destroy(Item.gameObject);
+        }
+    }
+    public virtual void RemoveItem(ItemSO target)
     {
         myItens.Remove(target);
+        CountItens();
     }
-    public void AddItem(ItemSO target)
+    public virtual void AddItem(ItemSO target)
     {
         myItens.Add(target);
+        CountItens();
     }
 }

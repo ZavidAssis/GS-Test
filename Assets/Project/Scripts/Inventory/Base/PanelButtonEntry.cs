@@ -18,5 +18,10 @@ public class PanelButtonEntry : MonoBehaviour
     {
         buttonText.text = function.name;
         myButton.onClick.AddListener(function.action);
+        myButton.onClick.AddListener(ButtonFunctionBase);
+    }
+    void ButtonFunctionBase()
+    {
+        ChoicesPanel.Instance.Hide();
     }
 }

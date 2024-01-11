@@ -5,20 +5,27 @@ using UnityEngine;
 
 public class SellingInventory : InventoryBase
 {
-    [SerializeField]
-    private ItemSO[] itensToSell;
+    public static SellingInventory Instance { get; private set; }
+    public VendorScript CurrentVendor {  get; private set; }
     // Start is called before the first frame update
     void Awake()
     {
-        myItens = itensToSell.ToList();
+        Instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetShow(InventoryState state,VendorScript Vendor, ItemSO[] ItensToSell)
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            ShowHide(InventoryState.Buying);
-        }
+        CurrentVendor = Vendor;
+        myItens = ItensToSell.ToList();
+        base.ShowHide(state, true);
+    }
+    public override void AddItem(ItemSO target)
+    {
+        base.AddItem(target);
+        CurrentVendor.itensSelling.Add(target);
+    }
+    public override void RemoveItem(ItemSO target)
+    {
+        base.RemoveItem(target);
+        CurrentVendor.itensSelling.Remove(target);
     }
 }
